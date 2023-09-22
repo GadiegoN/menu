@@ -445,6 +445,19 @@
 
 
           <div class="row mr-0 ml-0 hidden animated fadeInDownBig" id="placeDelivery">
+            <div class="col-12 col-lg-4 col-md-4 col-sm-12 mb-2">
+              <label for="payment">Forma de pagamento:</label>
+              <select  class="form-control" name="payment" id="payment">
+                <option value="-1">...</option>
+                <option value="PIX">PIX</option>
+                <option value="CARTÃO">Cartão</option>
+                <option value="DINHEIRO">Dinheiro</option>
+              </select>
+            </div>
+            <div class="col-12 col-lg-6 col-md-6 col-sm-12 mb-2">
+              
+            </div>
+            
             <div class="col-12 col-lg-4 col-md-4 col-sm-12">
               <div class="form-group container-cep">
                 <label for="cep">CEP:</label>
@@ -524,6 +537,10 @@
               <div class="row" id="listItemSummary">
                 
               </div>
+            </div>
+
+            <div class="col-12">
+              <p class="title-cart mt-4"><b id="paymentSummary"></b></p>
             </div>
 
             <div class="col-12">

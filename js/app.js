@@ -324,6 +324,7 @@ menu.methods = {
         let uf = $('#uf').val().trim()
         let complement = $('#complement').val().trim()
         let number = $('#number').val().trim()
+        let payment = $('#payment').val().trim()
 
         if(cep.length <= 0) {
             menu.methods.alertMessage('CEP não informado!')
@@ -355,6 +356,12 @@ menu.methods = {
             return
         }
 
+        if(payment == "-1") {
+            menu.methods.alertMessage('Modo de pagamento não informado!')
+            $('#payment').focus()
+            return
+        }
+
         if(number.length <= 0) {
             menu.methods.alertMessage('Número não informado!')
             $('#number').focus()
@@ -369,6 +376,7 @@ menu.methods = {
             uf,
             number,
             complement,
+            payment
         }
         
         menu.methods.loadStep(3)
@@ -392,6 +400,7 @@ menu.methods = {
 
         $('#summaryAddress').html(`${MY_ADRESS.adress}, ${MY_ADRESS.number}, ${MY_ADRESS.district}`)
         $('#cityAddress').html(`${MY_ADRESS.city}, ${MY_ADRESS.uf} / ${MY_ADRESS.cep} ${MY_ADRESS.complement}`)
+        $('#paymentSummary').html(`Forma de pagamento: ${MY_ADRESS.payment}`)
 
         menu.methods.finalizeOrder()
     },
@@ -411,6 +420,7 @@ menu.methods = {
                 text += `\n${MY_ADRESS.adress}, ${MY_ADRESS.number}, ${MY_ADRESS.district}`
                 text += `\n${MY_ADRESS.city}, ${MY_ADRESS.uf} / ${MY_ADRESS.cep} ${MY_ADRESS.complement}`
                 text += `\n\n*Total (com entrega): R$ ${(VALUE_CART + VALUE_DELIVERY).toFixed(2).replace('.', ',')}*`
+                text += `\n\n*Forma de pagamento: ${MY_ADRESS.payment}*`
                 // return text
             }
 
