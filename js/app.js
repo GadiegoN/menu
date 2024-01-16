@@ -498,7 +498,7 @@ menu.templetes = {
                     <b>\${name}</b>
                 </p>
                 <p class="price-product text-center"><b>R$ <span class="price">\${price}</span></b></p>
-                <p class="dsc-product text-center"><b>R$ <span class="dsc">\${dsc}</span></b></p>
+                <p class="dsc-product text-center"><b><span class="dsc">\${dsc}</span></b></p>
                 <div class="add-cart">
                     <span class="btn-less" onclick="menu.methods.decreaseQuantityCart('\${id}')">
                     <i class="fa fa-minus"></i>
