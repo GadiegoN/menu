@@ -25,23 +25,24 @@ menu.methods = {
     getItemsMenu: (category = 'burgers', seemore = false) => {
         var filter = MENU[category];
 
-        if(!seemore) {
+        if (!seemore) {
             $("#itemsMenu").html('')
             $("#btnseeMore").removeClass("hidden")
         }
 
         $.each(filter, (i, e) => {
             let temp = menu.templetes.item
-            .replace(/\${img}/g, e.img)
-            .replace(/\${name}/g, e.name)
-            .replace(/\${price}/g, e.price.toFixed(2).replace(".", ","))
-            .replace(/\${id}/g, e.id)
+                .replace(/\${img}/g, e.img)
+                .replace(/\${name}/g, e.name)
+                .replace(/\${price}/g, e.price.toFixed(2).replace(".", ","))
+                .replace(/\${id}/g, e.id)
+                .replace(/\${dsc}/g, e.dsc)
 
-            if(seemore && i >= 8 && i < 12) {
+            if (seemore && i >= 8 && i < 12) {
                 $("#itemsMenu").append(temp)
             }
 
-            if(!seemore && i < 8) {
+            if (!seemore && i < 8) {
                 $("#itemsMenu").append(temp)
             }
 
@@ -49,7 +50,7 @@ menu.methods = {
 
         $(".container-menu a").removeClass("active disabled")
 
-        $("#menu-"+ category).addClass("active disabled")
+        $("#menu-" + category).addClass("active disabled")
     },
 
     seeMore: () => {
@@ -58,7 +59,7 @@ menu.methods = {
 
         $("#btnseeMore").addClass("hidden")
     },
-    
+
     decreaseQuantityCart: (id) => {
         let quantityItemsCurrently = parseInt($("#quantityCart-" + id).text())
 
@@ -69,23 +70,23 @@ menu.methods = {
 
     increaseQuantityCart: (id) => {
         let quantityItemsCurrently = parseInt($("#quantityCart-" + id).text())
-        
-        if(quantityItemsCurrently <= 9){
+
+        if (quantityItemsCurrently <= 9) {
             $($("#quantityCart-" + id).text(quantityItemsCurrently + 1))
         }
     },
 
     addItemCart: (id) => {
         let quantityItemsCurrently = parseInt($("#quantityCart-" + id).text());
-    
+
         if (quantityItemsCurrently > 0) {
             var category = $(".container-menu a.active").attr("id").split("menu-")[1];
             let filter = MENU[category];
             let item = $.grep(filter, (e, i) => { return e.id == id });
-    
+
             if (item.length > 0) {
                 let cartContainsItems = $.grep(MY_CART, (elem, index) => { return elem.id === id });
-    
+
                 if (cartContainsItems.length > 0) {
                     let objIndex = MY_CART.findIndex((obj => obj.id == id));
                     MY_CART[objIndex].quantity += quantityItemsCurrently;
@@ -109,7 +110,7 @@ menu.methods = {
             total += e.quantity
         })
 
-        if(total > 0) {
+        if (total > 0) {
             $(".button-cart").removeClass("hidden")
             $(".container-limit").removeClass("hidden")
         } else {
@@ -122,7 +123,7 @@ menu.methods = {
     },
 
     openModalCart: (open) => {
-        if(open) {
+        if (open) {
             $('#modalCart').removeClass('hidden')
             menu.methods.loadCart(1)
         } else {
@@ -131,7 +132,7 @@ menu.methods = {
     },
 
     loadStep: (step) => {
-        if(step == 1){
+        if (step == 1) {
             $('#labelTitleStep').text('Seu carrinho:')
             $('#cartItems').removeClass('hidden')
             $('#placeDelivery').addClass('hidden')
@@ -146,7 +147,7 @@ menu.methods = {
             $('#btnBackStep').addClass('hidden')
         }
 
-        if(step == 2) {
+        if (step == 2) {
             $('#labelTitleStep').text('Endereço de entrega:')
             $('#cartItems').addClass('hidden')
             $('#placeDelivery').removeClass('hidden')
@@ -162,7 +163,7 @@ menu.methods = {
             $('#btnBackStep').removeClass('hidden')
         }
 
-        if(step == 3) {
+        if (step == 3) {
             $('#labelTitleStep').text('Resumo do pedido:')
             $('#cartItems').addClass('hidden')
             $('#placeDelivery').addClass('hidden')
@@ -190,7 +191,7 @@ menu.methods = {
         menu.methods.loadStep(1)
         $('#btnStepDelivery').removeClass('disabled')
 
-        if(MY_CART.length > 0) {
+        if (MY_CART.length > 0) {
             $('#cartItems').html('');
             $.each(MY_CART, (i, e) => {
                 let temp = menu.templetes.product
@@ -202,14 +203,14 @@ menu.methods = {
 
                 $('#cartItems').append(temp)
 
-                if((i + 1) == MY_CART.length) {
+                if ((i + 1) == MY_CART.length) {
                     menu.methods.loadvalues()
                 }
             })
         } else {
             $('#btnStepDelivery').addClass('disabled')
             $('#cartItems').html('<p class="empty-cart"><i class="fa fa-shopping-bag"></i> Seu carrinho está vazio</>')
-            
+
             menu.methods.loadvalues()
         }
     },
@@ -227,8 +228,8 @@ menu.methods = {
 
     extendQuantityCart: (id) => {
         let quantityItemsCurrently = parseInt($("#quantityBag-" + id).text())
-        
-        if(quantityItemsCurrently <= 99){
+
+        if (quantityItemsCurrently <= 99) {
             $($("#quantityBag-" + id).text(quantityItemsCurrently + 1))
             menu.methods.updateCart(id, quantityItemsCurrently + 1)
         }
@@ -262,7 +263,7 @@ menu.methods = {
         $.each(MY_CART, (i, e) => {
             VALUE_CART += parseFloat(e.price * e.quantity)
 
-            if((i + 1) == MY_CART.length) {
+            if ((i + 1) == MY_CART.length) {
                 $('#labelTotalPrice').text(`R$ ${VALUE_CART.toFixed(2).replace('.', ',')}`)
                 $('#labelPriceDelivery').text(`+ R$ ${VALUE_DELIVERY.toFixed(2).replace('.', ',')}`)
                 $('#labelSumPrice').text(`R$ ${(VALUE_CART + VALUE_DELIVERY).toFixed(2).replace('.', ',')}`)
@@ -271,30 +272,31 @@ menu.methods = {
     },
 
     loadAddress: () => {
-        if(MY_CART.length <= 0) {
+        if (MY_CART.length <= 0) {
             menu.methods.alertMessage('Seu carrinho está vazio')
             return;
         }
 
+        menu.methods.searchZipCode()
         menu.methods.loadStep(2)
     },
 
     searchZipCode: () => {
-        var cep = $('#cep').val().trim().replace(/\D/g, '')
+        var cep = 38195000
 
-        if(cep != '') {
+        if (cep != '') {
             var validateCep = /^[0-9]{8}$/
 
-            if(validateCep.test(cep)) {
+            if (validateCep.test(cep)) {
                 $.getJSON(`https://viacep.com.br/ws/${cep}/json/?callback=?`, function (data) {
-                    if(!("erro" in data)){
+                    if (!("erro" in data)) {
                         $('#adress').val(data.logradouro)
                         $('#district').val(data.bairro)
                         $('#city').val(data.localidade)
                         $('#complement').val(data.complemento)
                         $('#uf').val(data.uf)
 
-                        if(data.logradouro == "") {
+                        if (data.logradouro == "") {
                             $('#adress').focus()
                         } else {
                             $('#number').focus()
@@ -326,43 +328,43 @@ menu.methods = {
         let number = $('#number').val().trim()
         let payment = $('#payment').val().trim()
 
-        if(cep.length <= 0) {
+        if (cep.length <= 0) {
             menu.methods.alertMessage('CEP não informado!')
             $('#cep').focus()
             return
         }
 
-        if(adress.length <= 0) {
+        if (adress.length <= 0) {
             menu.methods.alertMessage('Endereço não informado!')
             $('#adress').focus()
             return
         }
 
-        if(district.length <= 0) {
+        if (district.length <= 0) {
             menu.methods.alertMessage('Bairro não informado!')
             $('#district').focus()
             return
         }
 
-        if(city.length <= 0) {
+        if (city.length <= 0) {
             menu.methods.alertMessage('Cidade não informado!')
             $('#city').focus()
             return
         }
 
-        if(uf == "-1") {
+        if (uf == "-1") {
             menu.methods.alertMessage('Estado não informado!')
             $('#uf').focus()
             return
         }
 
-        if(payment == "-1") {
+        if (payment == "-1") {
             menu.methods.alertMessage('Modo de pagamento não informado!')
             $('#payment').focus()
             return
         }
 
-        if(number.length <= 0) {
+        if (number.length <= 0) {
             menu.methods.alertMessage('Número não informado!')
             $('#number').focus()
             return
@@ -378,7 +380,7 @@ menu.methods = {
             complement,
             payment
         }
-        
+
         menu.methods.loadStep(3)
         menu.methods.loadSummary()
 
@@ -413,7 +415,7 @@ menu.methods = {
         $.each(MY_CART, (i, e) => {
             items += `*${e.quantity}x* ${e.name} ....... R$ ${e.price.toFixed(2).replace('.', ',')} \n`
 
-            if((i + 1) == MY_CART.length) {
+            if ((i + 1) == MY_CART.length) {
                 var text = 'Gostaria de fazer um pedido:'
                 text += `\n*Itens do pedido:*\n\n${items}`
                 text += `\n*Endereço de entrega:*`
@@ -446,7 +448,7 @@ menu.methods = {
         $('#btnWhatsApp').attr('href', URL)
         $('#btnWhatsApp-1').attr('href', URL)
     },
- 
+
     loadCall: () => {
         $("#btnCall").attr('href', `tel:${COMPANY_PHONE}`)
     },
@@ -455,7 +457,7 @@ menu.methods = {
         $("#evaluation-1").addClass('hidden')
         $("#evaluation-2").addClass('hidden')
         $("#evaluation-3").addClass('hidden')
-        
+
         $("#btnEvaluation-1").removeClass('active')
         $("#btnEvaluation-2").removeClass('active')
         $("#btnEvaluation-3").removeClass('active')
@@ -467,16 +469,16 @@ menu.methods = {
     alertMessage: (text, color = "red", time = 3500) => {
 
         let id = Math.floor(Date.now() * Math.random()).toString();
-        
+
         let msg = `<div id="msg-${id}" class="animated fadeInDown toast ${color}">${text}</div>`
-        
+
         $("#container-messages").append(msg)
 
         setTimeout(() => {
-            $("#msg-"+ id).removeClass('fadeInDown')
-            $("#msg-"+ id).addClass('fadeOutUp')
+            $("#msg-" + id).removeClass('fadeInDown')
+            $("#msg-" + id).addClass('fadeOutUp')
             setTimeout(() => {
-                $("#msg-"+ id).remove()
+                $("#msg-" + id).remove()
             }, 800)
         }, time)
     }
@@ -495,7 +497,8 @@ menu.templetes = {
                 <p class="title-product text-center mt-4">
                     <b>\${name}</b>
                 </p>
-                <p class="price-product text-center"><b>R$ \${price}</b></p>
+                <p class="price-product text-center"><b>R$ <span class="price">\${price}</span></b></p>
+                <p class="dsc-product text-center"><b>R$ <span class="dsc">\${dsc}</span></b></p>
                 <div class="add-cart">
                     <span class="btn-less" onclick="menu.methods.decreaseQuantityCart('\${id}')">
                     <i class="fa fa-minus"></i>

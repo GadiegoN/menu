@@ -264,7 +264,7 @@ a.navbar-brand {
 }
 
 .card-item .title-product {
-    color: var(--color-black);
+    color: var(--color-black) !important;
     text-overflow: ellipsis;
     white-space: nowwrap;
     overflow: hidden;
@@ -275,6 +275,12 @@ a.navbar-brand {
 .card-item .price-product {
     color: var(--color-primary);
     font-size: 24px;
+    display: none;
+}
+
+.card-item .dsc-product {
+    color: var(--color-primary);
+    font-size: 12px;
 }
 
 .card-item .add-cart {
@@ -303,6 +309,36 @@ a.navbar-brand {
     border-bottom: 1px solid var(--color-black);
 }
 
+.card-item:hover .title-product {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.product .dsc-product {
+    display: none !important;
+}
+
+.product:hover .price-product {
+    display: none !important;
+}
+
+.product:hover .dsc-product {
+    display: block !important;
+}
+
+.card-item:hover .price-product {
+    display: block;
+    color: var(--color-black) !important;
+}
+
+.card-item:hover .dsc-product {
+    display: none !important;
+}
+
 .btn-more {
     color: var(--color-black);
     padding: 5px 7px;
@@ -327,16 +363,9 @@ a.navbar-brand {
     background-color: var(--color-primary);
 }
 
-.card-item:hover .title-product {
-    display: none;
-}
 
 .card-item:hover .add-cart {
     display: flex;
-}
-
-.card-item:hover .price-product {
-    color: var(--color-black) !important;
 }
 
 .evaluations {

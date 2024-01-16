@@ -2,11 +2,11 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante - Seja bem vindo!</title>
 
-    <link rel="icon" href="./assets/fav.png" type="image/x-icon">
+    <link rel="icon" href="./assets/fav.png" type="image/x-icon" />
 
     <link
       rel="stylesheet"
@@ -21,12 +21,14 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/responsive.css" />
     <link rel="stylesheet" href="./styles/animate.css" />
-    
   </head>
   <body>
     <div class="container-messages" id="container-messages"></div>
 
-    <a class="button-cart hidden animated fadeInRight" onclick="menu.methods.openModalCart(true)">
+    <a
+      class="button-cart hidden animated fadeInRight"
+      onclick="menu.methods.openModalCart(true)"
+    >
       <div class="badge-total-cart-float">0</div>
       <i class="fa fa-shopping-bag"></i>
     </a>
@@ -70,7 +72,11 @@
               </li>
             </ul>
 
-            <a href="#menu" class="btn btn-white btn-icon" onclick="menu.methods.openModalCart(true)">
+            <a
+              href="#menu"
+              class="btn btn-white btn-icon"
+              onclick="menu.methods.openModalCart(true)"
+            >
               Meu carrinho
               <span class="icon">
                 <div class="container-limit badge-total-cart hidden">0</div>
@@ -85,7 +91,7 @@
     <section class="banner" id="banner">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-one">
+          <div class="col-6">
             <div class="d-flex text-banner">
               <h1 class="wow fadeInLeft">
                 <b>Escolha sua comida <b class="color-primary">favorita.</b></b>
@@ -100,7 +106,11 @@
                   Ver cardápio
                 </a>
 
-                <a href="#" class="btn btn-white btn-icon-left mt-4" id="btnCall">
+                <a
+                  href="#"
+                  class="btn btn-white btn-icon-left mt-4"
+                  id="btnCall"
+                >
                   <span class="icon-left">
                     <i class="fa fa-phone"></i>
                   </span>
@@ -108,13 +118,26 @@
                 </a>
               </div>
             </div>
-            <a href="https://www.instagram.com/gadiego_front/" target="_blank" class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeInRight delay-07s">
+            <a
+              href="https://www.instagram.com/gadiego_front/"
+              target="_blank"
+              class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeInRight delay-07s"
+            >
               <i class="fa fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/gadiego.nogueira.3/" target="_blank" class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeInRight delay-07s">
+            <a
+              href="https://www.facebook.com/gadiego.nogueira.3/"
+              target="_blank"
+              class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeInRight delay-07s"
+            >
               <i class="fa fa-facebook-f"></i>
             </a>
-            <a href="#" target="_blank" class="btn btn-sm btn-white btn-social mt-4 wow fadeInRight delay-07s" id="btnWhatsApp">
+            <a
+              href="#"
+              target="_blank"
+              class="btn btn-sm btn-white btn-social mt-4 wow fadeInRight delay-07s"
+              id="btnWhatsApp"
+            >
               <i class="fa fa-whatsapp"></i>
             </a>
           </div>
@@ -151,7 +174,9 @@
             </h1>
           </div>
 
-          <div class="col-12 col-lg-4 col-md-4 col-sm-12 col-one mb-5 wow fadeInUp">
+          <div
+            class="col-12 col-lg-4 col-md-4 col-sm-12 col-one mb-5 wow fadeInUp"
+          >
             <div class="card-icon text-center">
               <img src="./assets/image/icone-pedido.svg" width="150" alt="" />
             </div>
@@ -164,7 +189,9 @@
             </div>
           </div>
 
-          <div class="col-12 col-lg-4 col-md-4 col-sm-12 col-one mb-5 wow fadeInUp">
+          <div
+            class="col-12 col-lg-4 col-md-4 col-sm-12 col-one mb-5 wow fadeInUp"
+          >
             <div class="card-icon text-center">
               <img src="./assets/image/icone-delivery.svg" width="250" alt="" />
             </div>
@@ -209,39 +236,71 @@
           </div>
 
           <div class="col-12 container-menu wow fadeInUp">
-            <a href="#menu" id="menu-burgers" class="btn btn-white btn-sm mr-3 active" onclick="menu.methods.getItemsMenu('burgers')">
+            <a
+              href="#menu"
+              id="menu-burgers"
+              class="btn btn-white btn-sm mr-3 active"
+              onclick="menu.methods.getItemsMenu('burgers')"
+            >
               <i class="fas fa-hamburger"></i>&nbsp; Burgues
             </a>
 
-            <a href="#menu" id="menu-pizzas" class="btn btn-white btn-sm mr-3" onclick="menu.methods.getItemsMenu('pizzas')">
+            <a
+              href="#menu"
+              id="menu-pizzas"
+              class="btn btn-white btn-sm mr-3"
+              onclick="menu.methods.getItemsMenu('pizzas')"
+            >
               <i class="fas fa-pizza-slice"></i>&nbsp; Pizzas
             </a>
 
-            <a href="#menu" id="menu-churrasco" class="btn btn-white btn-sm mr-3" onclick="menu.methods.getItemsMenu('churrasco')">
+            <a
+              href="#menu"
+              id="menu-churrasco"
+              class="btn btn-white btn-sm mr-3"
+              onclick="menu.methods.getItemsMenu('churrasco')"
+            >
               <i class="fas fa-drumstick-bite"></i>&nbsp; Churrasco
             </a>
 
-            <a href="#menu" id="menu-steaks" class="btn btn-white btn-sm mr-3" onclick="menu.methods.getItemsMenu('steaks')">
+            <a
+              href="#menu"
+              id="menu-steaks"
+              class="btn btn-white btn-sm mr-3"
+              onclick="menu.methods.getItemsMenu('steaks')"
+            >
               <i class="fas fa-bacon"></i>&nbsp; Steaks
             </a>
 
-            <a href="#menu" id="menu-bebidas" class="btn btn-white btn-sm mr-3" onclick="menu.methods.getItemsMenu('bebidas')">
+            <a
+              href="#menu"
+              id="menu-bebidas"
+              class="btn btn-white btn-sm mr-3"
+              onclick="menu.methods.getItemsMenu('bebidas')"
+            >
               <i class="fas fa-cocktail"></i>&nbsp; Bebidas
             </a>
 
-            <a href="#menu" id="menu-sobremesas" class="btn btn-white btn-sm mr-3" onclick="menu.methods.getItemsMenu('sobremesas')">
+            <a
+              href="#menu"
+              id="menu-sobremesas"
+              class="btn btn-white btn-sm mr-3"
+              onclick="menu.methods.getItemsMenu('sobremesas')"
+            >
               <i class="fas fa-ice-cream"></i>&nbsp; Sobremesas
             </a>
           </div>
 
           <div class="col-12 col-one mt-3">
-            <div class="row" id="itemsMenu">
-
-            </div>
+            <div class="row" id="itemsMenu"></div>
           </div>
 
           <div class="flex more">
-            <a id="btnseeMore" onclick="menu.methods.seeMore()" class="btn btn-white btn-sm mr-3 wow fadeInUp">
+            <a
+              id="btnseeMore"
+              onclick="menu.methods.seeMore()"
+              class="btn btn-white btn-sm mr-3 wow fadeInUp"
+            >
               ver mais
             </a>
           </div>
@@ -250,7 +309,7 @@
     </section>
 
     <section class="evaluations" id="evaluation">
-      <div class="background-menu"></div>      
+      <div class="background-menu"></div>
 
       <div class="container">
         <div class="row">
@@ -267,7 +326,10 @@
               <b>O que dizem sobre nós?</b>
             </h1>
             <div class="mb-5 animated fadeIn">
-              <div class="evaluation animated fadeInRight delay-01s" id="evaluation-1">
+              <div
+                class="evaluation animated fadeInRight delay-01s"
+                id="evaluation-1"
+              >
                 <div class="container-infos-evaluation">
                   <div class="image-evaluation"></div>
                   <div>
@@ -292,7 +354,10 @@
                   <i class="fas fa-quote-right"></i>
                 </p>
               </div>
-              <div class="evaluation animated fadeInRight hidden" id="evaluation-2">
+              <div
+                class="evaluation animated fadeInRight hidden"
+                id="evaluation-2"
+              >
                 <div class="container-infos-evaluation">
                   <div class="image-evaluation"></div>
                   <div>
@@ -317,7 +382,10 @@
                   <i class="fas fa-quote-right"></i>
                 </p>
               </div>
-              <div class="evaluation animated fadeInRight hidden" id="evaluation-3">
+              <div
+                class="evaluation animated fadeInRight hidden"
+                id="evaluation-3"
+              >
                 <div class="container-infos-evaluation">
                   <div class="image-evaluation"></div>
                   <div>
@@ -344,13 +412,28 @@
               </div>
             </div>
 
-            <a id="btnEvaluation-1" onclick="menu.methods.openEvaluation(1)" target="_blank" class="btn btn-sm btn-white wow fadeInRight delay-04s btn-social mt-4 mr-3 active">
+            <a
+              id="btnEvaluation-1"
+              onclick="menu.methods.openEvaluation(1)"
+              target="_blank"
+              class="btn btn-sm btn-white wow fadeInRight delay-04s btn-social mt-4 mr-3 active"
+            >
               1
             </a>
-            <a id="btnEvaluation-2" onclick="menu.methods.openEvaluation(2)" target="_blank" class="btn btn-sm btn-white wow fadeInRight delay-04s btn-social mt-4 mr-3">
+            <a
+              id="btnEvaluation-2"
+              onclick="menu.methods.openEvaluation(2)"
+              target="_blank"
+              class="btn btn-sm btn-white wow fadeInRight delay-04s btn-social mt-4 mr-3"
+            >
               2
             </a>
-            <a id="btnEvaluation-3" onclick="menu.methods.openEvaluation(3)" target="_blank" class="btn btn-sm btn-white wow fadeInRight delay-04s btn-social mt-4">
+            <a
+              id="btnEvaluation-3"
+              onclick="menu.methods.openEvaluation(3)"
+              target="_blank"
+              class="btn btn-sm btn-white wow fadeInRight delay-04s btn-social mt-4"
+            >
               3
             </a>
           </div>
@@ -364,30 +447,32 @@
           <div class="col-12 col-one">
             <div class="card-secondary wow fadeInUp">
               <div class="row">
-
                 <div class="col-12 col-lg-7 col-md-7 col-sm-12">
                   <span class="hint-title"><b>Reserva</b></span>
                   <h1 class="title">
                     <b>Quer reservar um horário?</b>
                   </h1>
                   <p class="pr-5">
-                    Mande uma mensagem clicando no botão abaixo! <br>
+                    Mande uma mensagem clicando no botão abaixo! <br />
                     Reserve sua data e horário de forma simples e rápida.
                   </p>
-                  <a href="#" class="btn btn-yellow mt-4" id="btnReservation" target="_blank">
+                  <a
+                    href="#"
+                    class="btn btn-yellow mt-4"
+                    id="btnReservation"
+                    target="_blank"
+                  >
                     Fazer reserva
                   </a>
                 </div>
 
                 <div class="col-5 no-mobile">
-                  <div class="card-reservation">
-                  </div>
+                  <div class="card-reservation"></div>
 
                   <div class="d-flex img-banner">
-                    <img src="./assets/image/icone-reserva.svg" alt="">
+                    <img src="./assets/image/icone-reserva.svg" alt="" />
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -398,24 +483,43 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-3 col-md-3 col-sm-12 col-one footer-container-logo">
-            <img class="footer-logo" src="./assets/image/logo.png" alt="">
+          <div
+            class="col-12 col-lg-3 col-md-3 col-sm-12 col-one footer-container-logo"
+          >
+            <img class="footer-logo" src="./assets/image/logo.png" alt="" />
           </div>
 
-          <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-one footer-container-text">
+          <div
+            class="col-12 col-lg-6 col-md-6 col-sm-12 col-one footer-container-text"
+          >
             <p class="mb-0">
               <b>Menu online</b> &copy; todos os direitos reservados
             </p>
           </div>
 
-          <div class="col-12 col-lg-3 col-md-3 col-sm-12 col-one footer-container-network">
-            <a href="https://www.instagram.com/gadiego_front/" target="_blank" class="btn btn-sm btn-white btn-social mr-3">
+          <div
+            class="col-12 col-lg-3 col-md-3 col-sm-12 col-one footer-container-network"
+          >
+            <a
+              href="https://www.instagram.com/gadiego_front/"
+              target="_blank"
+              class="btn btn-sm btn-white btn-social mr-3"
+            >
               <i class="fa fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/gadiego.nogueira.3/" target="_blank" class="btn btn-sm btn-white btn-social mr-3">
+            <a
+              href="https://www.facebook.com/gadiego.nogueira.3/"
+              target="_blank"
+              class="btn btn-sm btn-white btn-social mr-3"
+            >
               <i class="fa fa-facebook-f"></i>
             </a>
-            <a href="#" target="_blank" class="btn btn-sm btn-white btn-social" id="btnWhatsApp-1">
+            <a
+              href="#"
+              target="_blank"
+              class="btn btn-sm btn-white btn-social"
+              id="btnWhatsApp-1"
+            >
               <i class="fa fa-whatsapp"></i>
             </a>
           </div>
@@ -426,7 +530,11 @@
     <div class="modal-full hidden animated fadeInRightBig" id="modalCart">
       <div class="m-header">
         <div class="container">
-          <a onclick="menu.methods.openModalCart(false)" class="btn btn-white btn-sm float-right">Fechar</a>
+          <a
+            onclick="menu.methods.openModalCart(false)"
+            class="btn btn-white btn-sm float-right"
+            >Fechar</a
+          >
           <div class="steps">
             <div class="step step-1">1</div>
             <div class="step step-2">2</div>
@@ -440,29 +548,42 @@
 
       <div class="m-body">
         <div class="container">
-          <div class="row mr-0 ml-0 hidden animated fadeInDownBig" id="cartItems">
-          </div>
+          <div
+            class="row mr-0 ml-0 hidden animated fadeInDownBig"
+            id="cartItems"
+          ></div>
 
-
-          <div class="row mr-0 ml-0 hidden animated fadeInDownBig" id="placeDelivery">
+          <div
+            class="row mr-0 ml-0 hidden animated fadeInDownBig"
+            id="placeDelivery"
+          >
             <div class="col-12 col-lg-4 col-md-4 col-sm-12 mb-2">
               <label for="payment">Forma de pagamento:</label>
-              <select  class="form-control" name="payment" id="payment">
+              <select class="form-control" name="payment" id="payment">
                 <option value="-1">...</option>
                 <option value="PIX">PIX</option>
                 <option value="CARTÃO">Cartão</option>
                 <option value="DINHEIRO">Dinheiro</option>
               </select>
             </div>
-            <div class="col-12 col-lg-6 col-md-6 col-sm-12 mb-2">
-              
-            </div>
-            
+            <div class="col-12 col-lg-6 col-md-6 col-sm-12 mb-2"></div>
+
             <div class="col-12 col-lg-4 col-md-4 col-sm-12">
               <div class="form-group container-cep">
                 <label for="cep">CEP:</label>
-                <input type="text" name="cep" id="cep" class="form-control">
-                <a onclick="menu.methods.searchZipCode()" class="btn btn-yellow btn-sm"><i class="fa fa-search"></i></a>
+                <input
+                  type="text"
+                  name="cep"
+                  id="cep"
+                  class="form-control"
+                  value="38195-000"
+                  disabled
+                />
+                <a
+                  onclick="menu.methods.searchZipCode()"
+                  class="btn btn-yellow btn-sm"
+                  ><i class="fa fa-search"></i
+                ></a>
               </div>
             </div>
 
@@ -470,73 +591,100 @@
 
             <div class="col-12 col-lg-6 col-md-6 col-sm-12">
               <label for="adress">Endereço:</label>
-                <input type="text" name="adress" id="adress" class="form-control">
+              <input
+                type="text"
+                name="adress"
+                id="adress"
+                class="form-control"
+              />
             </div>
 
             <div class="col-12 col-lg-4 col-md-4 col-sm-12">
               <label for="district">Bairro:</label>
-                <input type="text" name="district" id="district" class="form-control">
+              <input
+                type="text"
+                name="district"
+                id="district"
+                class="form-control"
+              />
             </div>
 
             <div class="col-12 col-lg-2 col-md-2 col-sm-12">
               <label for="number">Número:</label>
-                <input type="number" name="number" id="number" class="form-control">
+              <input
+                type="number"
+                name="number"
+                id="number"
+                class="form-control"
+              />
             </div>
 
             <div class="col-12 col-lg-6 col-md-6 col-sm-12 mt-4">
               <label for="city">Cidade:</label>
-                <input type="text" name="city" id="city" class="form-control">
+              <input
+                type="text"
+                name="city"
+                id="city"
+                class="form-control"
+                disabled
+              />
             </div>
 
             <div class="col-12 col-lg-4 col-md-4 col-sm-12 mt-4">
               <label for="complement">Complemento:</label>
-                <input type="text" name="complement" id="complement" class="form-control">
+              <input
+                type="text"
+                name="complement"
+                id="complement"
+                class="form-control"
+              />
             </div>
 
             <div class="col-12 col-lg-2 col-md-2 col-sm-12 mt-4">
               <label for="uf">UF:</label>
-                <select  class="form-control" name="uf" id="uf">
-                  <option value="-1">...</option>
-                  <option value="AC">AC</option>
-                  <option value="AL">AL</option>
-                  <option value="AP">AP</option>
-                  <option value="AM">AM</option>
-                  <option value="BA">BA</option>
-                  <option value="CE">CE</option>
-                  <option value="DF">DF</option>
-                  <option value="ES">ES</option>
-                  <option value="GO">GO</option>
-                  <option value="MA">MA</option>
-                  <option value="MT">MT</option>
-                  <option value="MS">MS</option>
-                  <option value="MG">MG</option>
-                  <option value="PA">PA</option>
-                  <option value="PB">PB</option>
-                  <option value="PR">PR</option>
-                  <option value="PE">PE</option>
-                  <option value="PI">PI</option>
-                  <option value="RJ">RJ</option>
-                  <option value="RN">RN</option>
-                  <option value="RS">RS</option>
-                  <option value="RO">RO</option>
-                  <option value="RR">RR</option>
-                  <option value="SC">SC</option>
-                  <option value="SP">SP</option>
-                  <option value="SE">SE</option>
-                  <option value="TO">TO</option>
-                </select>
+              <select class="form-control" disabled name="uf" id="uf">
+                <option value="-1">...</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+              </select>
             </div>
           </div>
 
-          <div class="row mr-0 ml-0 hidden animated fadeInDownBig" id="cartSummary">
+          <div
+            class="row mr-0 ml-0 hidden animated fadeInDownBig"
+            id="cartSummary"
+          >
             <div class="col-12">
               <p class="title-cart mt-4"><b>Itens do pedido</b></p>
             </div>
 
             <div class="col-12">
-              <div class="row" id="listItemSummary">
-                
-              </div>
+              <div class="row" id="listItemSummary"></div>
             </div>
 
             <div class="col-12">
@@ -558,7 +706,6 @@
                 <p class="city-address" id="cityAddress"></p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -580,10 +727,31 @@
             </p>
           </div>
 
-          <a onclick="menu.methods.loadAddress()" class="btn btn-yellow float-right" id="btnStepDelivery">Continuar</a>
-          <a onclick="menu.methods.requestSummary()" class="btn btn-yellow float-right hidden" id="btnStepAddress">Revisar pedido</a>
-          <a href="#" class="btn btn-yellow float-right hidden" id="btnStepSummary" target="_blank">Enviar pedido</a>
-          <a onclick="menu.methods.backStep()" class="btn btn-white float-right hidden mr-3" id="btnBackStep">Voltar</a>
+          <a
+            onclick="menu.methods.loadAddress()"
+            class="btn btn-yellow float-right"
+            id="btnStepDelivery"
+            >Continuar</a
+          >
+          <a
+            onclick="menu.methods.requestSummary()"
+            class="btn btn-yellow float-right hidden"
+            id="btnStepAddress"
+            >Revisar pedido</a
+          >
+          <a
+            href="#"
+            class="btn btn-yellow float-right hidden"
+            id="btnStepSummary"
+            target="_blank"
+            >Enviar pedido</a
+          >
+          <a
+            onclick="menu.methods.backStep()"
+            class="btn btn-white float-right hidden mr-3"
+            id="btnBackStep"
+            >Voltar</a
+          >
         </div>
       </div>
     </div>
@@ -597,7 +765,7 @@
     <script src="./js/app.js"></script>
 
     <script>
-      new WOW().init()
+      new WOW().init();
     </script>
   </body>
 </html>
